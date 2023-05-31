@@ -105,5 +105,52 @@ var ourNumber = "our number";
 
 - Uma string literal, ou simplesmente string, é uma série de 0 ou mais caracteres entre áspas simples ou áspas duplas.
 
+## Variáveis não inicializadas
 
+- A partir do momento que uma variável é declarada, o valor dela se torna undefined (não definido). 
 
+- Se houver uma operação matemática em uma variável "undefined", seu resultado "NaN", o que significa que "não é um número". Se você concatenar (concatenar significa colocar junto) uma string com um var "undefined", você receberá uma string com o valor "undefined".
+
+## Como deve ser os nomes das variáveis
+
+<h2>Sintaxe:</h2>
+
+~~~JavaScript exemplo
+var ourName;
+~~~
+
+- Em JS, todos os nomes de variáveis e funções precisão obedecer a capitalização, pois é de importância estar bem capitalizado.
+
+- "ourvar", não é a mesma coisa que "ourVar". É possível haver diversas variáveis distintas com o mesmo nome, porém com a capitalização diferenciada. É extremamente recomendado pelo bem da clareza, que você não use esse recurso da linguagem.
+
+### Boas práticas
+
+- Usar a convênção de linguagem "camelCase"  para o nome das variáveis é extremamente importante para a clareza do código.
+
+~~~JavaScript exemplo
+var someVariable;
+var anotherVariableName;
+var thisVariableNameIsSoLong;
+~~~
+
+## Diferenciar entre as palavras-chave var e let
+
+- Um dos maiores problemas ao declarar variáveis com a palavra chave "var", é justamente a sobrescrita facilitada que pode acontecer nas declarações de variáveis.
+
+~~~JavaScript exemplo
+var camper = "James";
+var camper = "David";
+console.log(camper);
+~~~
+
+- Neste código retratado acima, a variável camper foi primeiramente declarada com a string "James" e então substituida pela string "David". O console irá exibir a string "David" pois está logo abaixo e consequêntemente mais prioritária. E quando isso acontece não aparece como erro na depuração ou busca e correção de bugs, tornando-a mais difíceis.
+
+- Porém, uma palavra-chave foi inserida no ES6 chamada "let". Ao usar o "let", tal variável só poderá ser declarada uma vez. E se houver um código assim:
+
+~~~JavaScript exemplo
+let camper = "James";
+let camper = "David";
+console.log(camper);
+~~~
+
+<p>Resultará em erro.</p>
