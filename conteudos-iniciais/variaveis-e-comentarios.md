@@ -153,4 +153,4 @@ let camper = "David";
 console.log(camper);
 ~~~
 
-<p>Resultará em erro.</p>
+<p>Resultará em erro. Tornando mais fácil para a correção de bugs ser feita.</p>
