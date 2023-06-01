@@ -72,6 +72,15 @@ ourNumber = 10;
 
 *OBS: Se por um acaso houver alguma conta após o operador =, por exemplo: "myVar = 7 + 5;", eles serão resolvidos antes de atribuir o valor à variável a esquerda do operador de atribuição "=".*
 
+## Para reatribuir variáveis 
+
+<h3>Sintaxe</h3>
+
+~~~JavaScript exemplo
+var ourNumber = 20;
+ourNumber = 10;
+~~~
+
 ## Atribuindo os mesmos valores de uma variável a outra variável diferente
 
 <h3>Sintaxe</h3>
@@ -154,3 +163,122 @@ console.log(camper);
 ~~~
 
 <p>Resultará em erro. Tornando mais fácil para a correção de bugs ser feita.</p>
+
+
+## Declarar variáveis somente de leitura com a palavra-chave const
+
+### Sintaxe:
+
+~~~JavaScript exemplo
+const camper = "James";
+console.log(camper);
+~~~
+
+- A palavra-chave `const` possui todos os recursos da palavra-chave `let` mais um bônus adicional que torna as variáveis `const` somente de leitura, ou seja, ela impede quase que totalmente a reatribuição de seu valor. 
+
+- O uso dela é importante para variáveis cujo uso são de extrema importância e que não podem ser mudadas.
+
+`OBS: É comum que os devs usem nomes de variáveis maiúsculas para valores imutáveis, ou seja, valores que não podem mudar.`
+
+## Adicionar dois números com JS
+
+<h2>SINTAXE:</h2>
+
+~~~JavaScript exemplo
+const myVar = 5 + 10;
+~~~
+
+- "Number" é um tipo de dado em JS que representa um dado numérico que pode envolver operações matemáticas nele.
+
+- Tipo de operações matemáticas: + (adição), - (subtração), * (multiplicação), / (divisão)
+
+## Incrementar um número
+
+<h2>SINTAXE:</h2>
+
+~~~JavaScript exemplo
+let num = 100;
+num++;
+~~~
+
+- O operador `++` faz com que incremente ou adicione 1 à variável.
+
+- No caso acima, a variável com número 100 foi adicionada 1 à variável, ou seja, o número se tornou de 100 para 101. 
+
+- Isso também equivale ao operador `--` na seguinte forma:
+
+~~~JavaScript exemplo
+let num = 100;
+num--;
+~~~
+
+- Isso faz com que o número 100 vire 99.
+
+## Números decimais
+
+<h2>SINTAXE:</h2>
+
+~~~JavaScript exemplo
+var num = 1.1;
+~~~
+
+- Nós podemos também armazenar números decimais em variáveis. Números decimais são às vezes referidos como números de ponto flutuante ou `floats`.
+
+`Observação: ao computar números, eles são calculados com precisão finita. Operações que usam pontos flutuantes podem levar a resultados diferentes do resultado desejado.`
+
+### Multiplicação e divisão de dois decimais com JS
+
+<h3>SINTAXE:</h3>
+
+~~~JavaScript exemplo
+var num = 1.1 * 1.1;
+
+// ou
+
+var num = 1.1 / 1.1;
+~~~
+
+- Tal recurso é usável, tornando possível a multiplicação e a divisão de números decimais com os operadores `*` e `/`.
+
+## Descobrir o resto
+
+<h2>SINTAXE:</h2>
+
+~~~JavaScript exemplo
+var num = 11 % 3;
+~~~
+
+- O operador `%` identifica o resto da divisão de dois números. No exemplo acima, o resto da divisão "11 / 3" será 2. Números que possuem resto `0` são `pares`, porém números que contem resto `1` são `ímpares`.
+
+## Atribuir de modo composto com adição e subtração aumentada
+
+<h2>SINTAXE:</h2>
+
+~~~JavaScript exemplo 1
+var num = 11;
+num += 3; //14
+~~~
+
+ao invés de:
+
+~~~JavaScript exemplo 2
+var num = 11;
+num = num + 3; //14
+~~~
+
+- Ao invés de atribuir uma modificação à uma variável como no exemplo 2, podemos fazer exatamente o mesmo como no exemplo 1, ou seja, podemos apenas usar o operador `+=` para atribuir um número ao valor inícial da variável. Isso torna o código mais legível e fácil. 
+
+- Etambém podemos fazer o mesmo com os operadores `*` e `/` para efetuar operações nas atribuições de variáveis.
+
+## Aspas literais em strings
+
+<h2>SINTAXE:</h2>
+
+~~~JavaScript exemplo 1
+const myStr = "I am a \"double quoted\" string inside \"double quotes\".";
+~~~
+
+- Quando você precisa de aspas literais dentro de uma string sem que a aspa seja considerada como final da string, você pode colocar uma barra invertida (\) na frente das aspas para que não seja considerada como fim de uma string.
+
+
+
