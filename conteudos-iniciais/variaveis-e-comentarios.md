@@ -274,11 +274,131 @@ num = num + 3; //14
 
 <h2>SINTAXE:</h2>
 
-~~~JavaScript exemplo 1
+~~~JavaScript exemplo 
 const myStr = "I am a \"double quoted\" string inside \"double quotes\".";
 ~~~
 
-- Quando você precisa de aspas literais dentro de uma string sem que a aspa seja considerada como final da string, você pode colocar uma barra invertida (\) na frente das aspas para que não seja considerada como fim de uma string.
+- Quando você precisa de aspas literais dentro de uma string sem que a aspa seja considerada como final da string, você pode colocar uma barra invertida "\" na frente das aspas para que não seja considerada como fim de uma string.
 
+## Cercar strings com aspas simples
 
+<h2>SINTAXE:</h2>
 
+~~~JavaScript exemplo 
+const singleQuoteStr = 'This is also a string';
+~~~
+
+- Aspas simples e duplas funcionam do mesmo jeito no JS.
+
+- O motivo pelo qual você pode usar isso é quando você quer usar ambos tipos de aspas em uma string, como por exemplo, quando é salvo uma tag "a" em uma string:
+
+~~~JavaScript exemplo 
+const ancoraStr = '<a href="#!">Ver todos</a>';
+~~~
+
+- Isso em muitos casos pode previnir o uso de caracteres de escapamento como o "\", porém, há casos em que o uso dela será necessário como esse:
+
+~~~JavaScript exemplo 
+const const badStr = 'Finn responds, "Let\'s go!"';
+~~~
+
+## Escapar sequências em strings
+
+| Código | Saída|
+|---|---|
+| \n | nova linha |
+| \t | tab |
+| \" | aspas duplas |
+| \' | aspas simples |
+| \\ | barra invertida |
+| \r | retorno de carro |
+| \b | retroceder |
+| \f | quebra de página |
+
+- Esses caracteres são usados em uma string que possui uma sequência e servem também para não criar espaçamentos nessas strings, como no exemplo a seguir:
+
+<h2>SINTAXE:</h2>
+
+~~~JavaScript exemplo 
+const myStr = "FirstLine\n\t\\SecondLine\nThirdLine";
+~~~
+
+- E isso resultará nisso:
+
+`FirstLine
+    \SecondLine
+ThirdLine`
+
+## Concatenar strings com o operador mais
+
+<h2>SINTAXE:</h2>
+
+~~~JavaScript exemplo 
+const ourStr = "I come first. " + "I come second.";
+~~~
+
+- Para concatenar duas strings, você usará operador "+" para juntar as duas strings. O espaçamento não é feito pelo operador, e sim por você mesmo.
+
+- O operador += também pode ser usado, como no exemplo a seguir:
+
+~~~JavaScript exemplo 
+let ourStr = "I come first. ";
+ourStr += "I come second.";
+~~~
+
+### Concatenar strings em diferentes variáveis
+
+<h2>SINTAXE:</h2>
+
+~~~JavaScript exemplo 
+const myStr = "Mateus";
+const ourStr = "My name is " + Mateus + " de Souza"; 
+~~~
+
+### Concatenar strings em diferentes variáveis usando o operador +=
+
+<h2>SINTAXE:</h2>
+
+~~~JavaScript exemplo 
+const myStr = "Mateus";
+let ourStr = "My name is "; 
+ourStr += myStr;
+~~~
+
+## Encontrar o tamanho de uma string
+
+<h2>SINTAXE:</h2>
+
+~~~JavaScript exemplo 
+const myStr = "Mateus";
+console.log(myStr.length);
+~~~
+
+- O valor do exemplo acima no console é 6, pois o conjunto de caracteres (que também incluem espaços) resultam nesse número.
+
+## Usar notação de colchetes para encontrar caracteres em uma string
+
+<h2>SINTAXE:</h2>
+
+~~~JavaScript exemplo 
+const firstName = "Charles";
+const firstLetter = firstName[0];
+~~~
+
+- Essa notação, no caso o "[0]", mostra o caractere representado nessa ordem, ou seja, o caractere mostrado no console será o "C".
+
+## Entender a imutabilidade das strings
+
+- Quando uma string é criada, ela é imutável, ou seja, ela não pode ser mudada. Por exemplo:
+
+~~~JavaScript exemplo 
+let firstName = "Charles";
+firstName[0] = "X";
+~~~
+
+- O exemplo acima mostrará um erro no console. Porém, o valor pode ser reatribuído. Por exemplo:
+
+~~~JavaScript exemplo 
+let firstName = "Charles";
+firstName = "Xharles";
+~~~
