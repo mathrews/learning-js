@@ -1,3 +1,5 @@
+# O que é JS?
+
 ## Ordem de escrita do code:
 
 - No JS, deve ser seguido uma ordem linear para escrever o código, se não, ocasionará em algum erro em breve.
@@ -15,6 +17,10 @@ function atualizarNome() {
 
 - Nesse exemplo, o código está seguindo uma ordem perfeita de como deve ser feito.
 
+## APIs:
+
+- Conjuntos prontos de códigos que implementam programas que seriam difíceis ou quase impossíveis de implementar. Um exemplo é o DOM(Document Object Model), o DOM te possibilita manipular os elementos do HTML e do CSS do projeto onde esse JS está inserido
+
 ## Interpretado x Compilado:
 
 - JS é uma linguagem interpretada, ou seja, o código é de execução imediata e escrito de cima para baixo e não há necessidade de se transformar em algo diferente antes do navegador executar o mesmo.
@@ -30,3 +36,8 @@ function atualizarNome() {
 - Código do `lado do servidor` dinamicamente gera novo conteúdo no servidor, puxando `dados de um banco de dados`. enquanto que JavaScript do `lado do cliente` dinamicamente gera novo conteúdo dentro do `navegador do cliente`, como criar uma nova tabela HTML com dados recebidos do `servidor` e mostrar a tabela em uma página web exibida para o usuário. 
 
 - Os significados são um pouco diferentes, porém relacionados, e o server/client-side do JS geralmente trabalham juntos.
+
+# Um primeiro mergulho no JS:
+
+## Pensando como um Programador:
+
