@@ -9,3 +9,4 @@
 - Focar na base
 
 - Praticar diareamente.
+
