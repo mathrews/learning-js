@@ -8,4 +8,5 @@
 
 - Focar na base
 
-- Ter um conhecimento básico de inglês
+- Praticar diareamente.
+
