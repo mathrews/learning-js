@@ -7,3 +7,5 @@
 - Aprender Lógica de programação.
 
 - Focar na base
+
+- Praticar diareamente.
