@@ -42,3 +42,43 @@ function atualizarNome() {
 ## Pensando como um Programador:
 
 - Pensar de forma específica.
+
+- Sintaxe não é a preocupação principal. E sim como aplicá-la para resolver os problemas do mundo real.
+
+- Fazer uma análise prévia dos requisitos do programa e aplicar de forma mais específica, limpa e eficaz para o bom funcionamento do código.
+
+- `Requisitos: trabalho duro, experiência com sintaxe de programação utilizada e prática, além de um pouco de criatividade, é claro.`
+
+- **Praticar.**
+
+- Uma prática muito importante é pegar o problema de escopo aberto e transformar esse problema em vários probleminhas de escopo fechado. `É muito importante que sejamos específicos e claros em nossos requisitos para atingirmos o nosso objetivo.`
+
+- Dividir os problemas em ordem cronológica é de suma importância, ou seja, o desenvolvedor precisa de uma lógica **linear** de raciocínio.
+
+- Escrever pontos de requisitos e seus subpontos em `ol (lista ordenada)` é uma boa prática. E também, a escrita de forma **condicional** é importante.
+
+- Para treinar essa lógica, acessar esse link: https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/First_steps/A_first_splash e caminhar até o tópico `pensando como um programador` e leia-o.
+
+- Transformar o passo a passo em código.
+
+## Funções:
+
+- Blocos reutilizaveis de código que se escrevem apenas uma vez para cada função e executá-lo infinitas vezes sem a necessidade de escrever outro código de novo.
+
+- Sintaxe: 
+
+~~~JS exemplo
+function nomeDaFunção(){}
+~~~
+
+- Para executar a função, é preciso uma chamada de função que consiste no nome da função seguido de parenteses e sinal `;`.
+
+- Sintaxe: 
+
+~~~JS exemplo
+nomeDaFunção();
+~~~
+
+## Operadores:
+
+- Os operadores JS nos permitem realizar contas matemáticas, unir sequências de texto, etc.
