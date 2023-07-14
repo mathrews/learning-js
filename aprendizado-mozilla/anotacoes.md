@@ -78,7 +78,3 @@ function nomeDaFunção(){}
 ~~~JS exemplo
 nomeDaFunção();
 ~~~
-
-## Operadores:
-
-- Os operadores JS nos permitem realizar contas matemáticas, unir sequências de texto, etc.
