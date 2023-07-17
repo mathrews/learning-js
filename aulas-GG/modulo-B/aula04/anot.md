@@ -145,7 +145,7 @@ Resultarão no valor True pois o operador lógico || se satisfaz se apenas um do
 | ** | 2° |
 | * / % | 3° | <strong>- ordem da esquerda para a direita</strong>
 | + - | 4° |
-| > < >=... | 5° |
+| > < >=... | 5° | <strong>- ordem da esquerda para a direita</strong>
 | (!) | 6° |
 | (&&) | 7° |
 | (||) | 8° |
