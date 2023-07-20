@@ -22,7 +22,7 @@ window.document.write('Olá, Mundo.')
 
 ## Selecionando os elementos do document no DOM:
 
-- Podemos selecionar por: Marca, ID, Nome, Classe e pos Seletor.
+- Podemos selecionar por: Marca, ID, Nome, Classe e por Seletor.
 
 - Se você for escolher o elemento por tag, e quiser um específico, podemos colocar da seguinte maneira:
 
