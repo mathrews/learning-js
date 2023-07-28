@@ -1,0 +1,14 @@
+{
+  "name": "aprendendo-js",
+  "version": "1.0.0",
+  "description": "Esse projeto é focado em ser uma \"pensadeira\" para meu aprendizado em JavaScript e tecnologias derivadas.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^5.1.6"
+  }
+}
