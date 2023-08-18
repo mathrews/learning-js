@@ -55,5 +55,7 @@ console.log(jhon.nomeCompleto());
 
 - E isso é mais eficiente pois o método está armazenado apenas uma vez na memória e a propriedade proto está apenas referênciando e não copiando o protótipo da classe construtora. E isso é eficiênte.
 
+- Colocar funcionalidades compartilhadas no protótipo das funções construtoras.
+
 
 
