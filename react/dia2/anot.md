@@ -22,7 +22,7 @@
 
 ## Estrutura do Projeto:
 
-- Uma aolicação react sempre é composta de um arquivo index.html que founciona como `CORE` da aplicação e possui uma div com um id chamado `root` onde tudo será inserido dentro dele por meio do JS.
+- Uma aplicação react sempre é composta de um arquivo index.html que founciona como `CORE` da aplicação e possui uma div com um id chamado `root` onde tudo será inserido dentro dele por meio do JS.
 
 - Como ele faz isso: Dentro do react `main` é importado o `ReactDOM`(integração do react com o browser) e o mesmo executa o método `render` e basicamente ele renderiza o `App` dentro do elemento que tem o id `root`.
 

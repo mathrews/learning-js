@@ -1,22 +1,13 @@
-export function Tweet() {
+type propriedades = {
+    text?: string,
+}
+
+
+export function Tweet(props: propriedades) {
+
     return (
         <>
-            <div>
-                <ul>
-                    <li>
-                        <p>Div importada</p>
-                    </li>
-                    <li>
-                        <p>Div importada</p>
-                    </li>
-                    <li>
-                        <p>Div importada</p>
-                    </li>
-                    <li>
-                        <p>Div importada</p>
-                    </li>
-                </ul>
-            </div>
+            <p>{props.text}</p>
         </>
     )
 }
