@@ -2,15 +2,18 @@
 /* <TextProps text="Texto na propriedade text" /> => forma de passar uma prop*/
 // import { TextProps } from "./components/Props"
 
-import { Estados } from "./components/Estados"
-
-
+import { Logo } from "./components/Cabecalho"
 
 function App() {
 
   return (
     <>
-      <Estados />
+      <header>
+        <Logo title="LOGO"/>
+      </header>
+      <main>
+
+      </main>
     </>
   )
 }
