@@ -1,4 +1,5 @@
 import { useState } from "react"
+import "../css/Cabecalho.css"
 
 type propsDaHeader = {
     title: string,
@@ -17,7 +18,7 @@ export function Logo(props: propsDaHeader) {
     }
 
     return (
-        <>
+        <div>
             <h1>{props.title}</h1>
             <nav>
                 {nomes.map(nomes => {
@@ -25,8 +26,7 @@ export function Logo(props: propsDaHeader) {
                 })}
             </nav>
             <span>estão nas prioridades da vida do Mateus.</span>
-            <br />
             <button onClick={adicionarNome}>Adicionar o Nome</button>
-        </>
+        </div>
     )
 }
