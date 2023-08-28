@@ -1,16 +1,10 @@
-// import { Tweet } from "./components/Tweet" 
-/* <TextProps text="Texto na propriedade text" /> => forma de passar uma prop*/
-// import { TextProps } from "./components/Props"
-
-import { AppRoutes } from "./Routes"
-
-
+import HeaderComponent from "./components/Header"
 
 function App() {
 
   return (
     <>
-      <AppRoutes/>
+      <HeaderComponent logo="React"/>
     </>
   )
 }
