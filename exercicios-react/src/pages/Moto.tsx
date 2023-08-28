@@ -1,5 +1,7 @@
 export function Moto() {
-    return (<>
+    return (
+    <>
         <h1>Moto!</h1>
-    </>)
+    </>
+    )
 }
