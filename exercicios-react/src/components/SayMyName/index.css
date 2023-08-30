@@ -1,0 +1,21 @@
+.containerDados {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: blueviolet;
+    padding: 16px;
+    border-radius: 6px;
+    gap: 6px;
+
+    & h1 {
+        color: #FFFF60;
+    }
+
+    & p {
+        color: #FFFF60;
+        font-weight: 400;
+    }
+}
+
