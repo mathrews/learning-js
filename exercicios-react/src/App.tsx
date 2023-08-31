@@ -1,18 +1,20 @@
-import './AppStyle.css'
-import Pessoa from "./components/Pessoa"
 
+import './AppStyle.css'
+import Evento from './components/Evento'
+import FormComp from './components/FormComp'
 
 function App() {
 
   return (
     <>
       <div className="app">
-        <Pessoa 
-          nome="Mateus"
-          idade={15}
-          profissao="Dev"
-          foto='https://minhasaude.proteste.org.br/wp-content/uploads/2022/10/muitas-laranjas.png'
-        />
+
+        <Evento numero={1}/>
+        <Evento numero={2}/>
+        <Evento numero={3}/>
+
+        <FormComp />
+
       </div>
     </>
   )

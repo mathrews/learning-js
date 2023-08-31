@@ -19,3 +19,21 @@
 - A sintaxe é `<> e </>`, e não há um nome para a tag;
 
 - Criamos no próprio JSX;
+
+# Avançando em props: 
+
+- Podemos `definir tipos para as props`, realizamos uma espécie de validação;
+
+- Definimos em um objeto chamado propTypes no próprio componente;
+
+- E ainda há a possibilidade de `definir um valor padrão`;
+
+- Neste caso utilizamos o objeto `defaultProps`;
+
+# Eventos
+
+- Os `eventos de React` são os mesmos eventos do DOM, ou seja, temos eventos como o `onClick`;
+
+- `O evento é atrelado a uma tag que irá executá-lo;`
+
+- Geralmente um `método` é atribuído ao evento, este método deve ser criado no componente;
