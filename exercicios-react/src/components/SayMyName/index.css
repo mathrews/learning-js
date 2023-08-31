@@ -1,3 +1,12 @@
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .containerDados {
     position: relative;
     display: flex;
@@ -8,6 +17,8 @@
     padding: 16px;
     border-radius: 6px;
     gap: 6px;
+    width: 16%;
+    height: 16%;
 
     & h1 {
         color: #FFFF60;
