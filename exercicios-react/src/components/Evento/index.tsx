@@ -1,17 +1,23 @@
+import Button from "./Button";
+
 type PropsEvento = {
-    numero: number
+    numero?: number
 }
 
-const Evento = (props: PropsEvento) => {
+const Evento = ({numero = 0}: PropsEvento) => {
 
     function meuEvento () {
-        console.log(`Fui ativado ${props.numero}`);
+        console.log(`Ativando o primeiro evento!`);
+    }
+    function segundoEvento () {
+        console.log(`Ativando o segundo evento`);
     }
 
     return (
         <>
             <p>Clique para disparar um evento:</p>
-            <button onClick={meuEvento}>Ativar!</button>
+            <Button evento={meuEvento} text="Primeiro evento"/>
+            <Button evento={segundoEvento} text="Segundo evento"/>
         </>
     )
 }
