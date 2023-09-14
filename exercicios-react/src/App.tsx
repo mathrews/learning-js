@@ -1,12 +1,14 @@
 import './AppStyle.css'
-import Footer from './components/Footer'
+import ExerciseUseEff from './components/useEffectExercise'
+
+
 
 function App() {
 
   return (
     <>
       <div className="app">
-        <Footer/>
+        <ExerciseUseEff />
       </div>
     </>
   )
