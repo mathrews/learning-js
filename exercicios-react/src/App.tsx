@@ -1,14 +1,12 @@
 import './AppStyle.css'
-import ExerciseUseEff from './components/useEffectExercise'
-
-
+import ExercUseCallbk from './components/ExercUseCallbk'
 
 function App() {
 
   return (
     <>
       <div className="app">
-        <ExerciseUseEff />
+        <ExercUseCallbk />
       </div>
     </>
   )
