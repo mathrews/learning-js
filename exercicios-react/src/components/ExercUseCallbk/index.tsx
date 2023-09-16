@@ -8,7 +8,8 @@ const ExercUseCallbk = () => {
     return email.length * 1000;
   }, [email.length]);
 
-  const mostrarSenhaEmailCons = useCallback(() => {
+  const mostrarSenhaEmailCons = useCallback((e) => {
+    e.preventDefault();
     console.log(email);
     console.log(senha);
   }, [email, senha]);
