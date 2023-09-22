@@ -1,4 +1,5 @@
-import Effect from "./components/Effect"
+import './App.css'
+import Effect from './components/Effect'
 
 function App() {
 
