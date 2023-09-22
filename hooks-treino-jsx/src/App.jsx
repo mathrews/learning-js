@@ -1,11 +1,11 @@
 import './App.css'
-import Effect from './components/Effect'
+import Reducer from './components/Reducer'
 
 function App() {
 
   return (
     <>
-      <Effect />
+      <Reducer />
     </>
   )
 }
