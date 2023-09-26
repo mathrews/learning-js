@@ -23,7 +23,7 @@ const reducer = (state, action) => {
         case "remove": {
             return{
                 ...state,
-                tasks: state.tasks.filter((item, index) => index != action.payload)
+                tasks: state.tasks.filter((item, index) => index != action.payload) // O método filter() cria um novo array com todos os elementos que passaram no teste implementado pela função fornecida. Retorna um novo array com os elements que passaram no teste. Elementos do array que não passaram no teste do callback são simplesmente ignorados, e não são incluídos no novo array.
             }
         }
         default: {
