@@ -1,11 +1,11 @@
 import './App.css'
-import Reducer from './components/Reducer'
+import ReducerExercise from './components/Reducer/ReducerExercise'
 
 function App() {
 
   return (
     <>
-      <Reducer />
+      <ReducerExercise />
     </>
   )
 }
