@@ -1,12 +1,17 @@
 import './App.css'
-import ReducerExercise from './components/Reducer/ReducerExercise'
+import Ways from './routes/Ways'
+
+import { useContext } from 'react';
+import { ThemeContext } from './context/ThemeContext';
 
 function App() {
 
+  const {theme} = useContext(ThemeContext);
+
   return (
-    <>
-      <ReducerExercise />
-    </>
+    <div className={`app ${theme === 'dark' ? 'dark-theme' : ''}`}>
+      <Ways/>
+    </div>
   )
 }
 

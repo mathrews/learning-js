@@ -43,16 +43,6 @@ const ReducerExercise = () => {
         renders.current += 1;
     }, [state]);
 
-    // const removeTask = (indexTask) => {
-    //     let aux = []
-    //     state.tasks.map((item, index) => {
-    //         if (index != indexTask) {
-    //             aux.push(item)
-    //         }
-    //     })
-    //     state.tasks = aux
-    // }
-
     return (
         <>
             <form>

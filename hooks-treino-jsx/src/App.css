@@ -1,0 +1,11 @@
+.app {
+    padding: 1rem;
+    height: 100vh;
+    margin: 0;
+}
+
+.dark-theme,
+.dark-theme a {
+    background-color: #333;
+    color: #fff;
+}
