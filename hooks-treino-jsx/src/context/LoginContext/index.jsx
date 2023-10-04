@@ -4,8 +4,9 @@ export const LoginContext = createContext();
 
 const reducer = (state, action) => {
     switch (action.type) {
-        case "atribuir": {
+        case "register": {
             return {
+                ...state,
                 email: action.payload1,
                 pass: action.payload2,
             };
@@ -16,18 +17,27 @@ const reducer = (state, action) => {
 };
 
 export const LoginProvider = ({ children }) => {
-    const [state, dispatch] = useReducer(reducer, { email: "", pass: "" });
+    const [state, dispatch] = useReducer(reducer, { email: "", pass: "", isLogged: false });
 
-    const [email, setEmail] = useState('')
-    const [pass, setPass] = useState('')
+    const [email, setEmail] = useState("");
+    const [pass, setPass] = useState("");
+
+    const [log, setLog] = useState(false);
 
     const setState = () => {
-        dispatch({type: "log", payload1: email, payload2: pass})
-    }
+        dispatch({ type: "register", payload1: email, payload2: pass });
+    };
 
-    return(
+    const verifyState = () => {
+        dispatch({ type: "verify", payload1: email, payload2: pass });
+    };
+
+    return (
         <>
-            <LoginContext.Provider value={{state, email, pass, dispatch, setEmail, setPass, setState}}>{children}</LoginContext.Provider>
+            <LoginContext.Provider
+                value={{ state, email, pass, dispatch, setEmail, setPass, setState, log, setLog, verifyState }}>
+                {children}
+            </LoginContext.Provider>
         </>
-    )
-}
+    );
+};
