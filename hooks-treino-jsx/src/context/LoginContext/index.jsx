@@ -24,7 +24,7 @@ export const LoginProvider = ({ children }) => {
 
     const [log, setLog] = useState(false);
 
-    const setState = () => {
+    const setReduce = () => {
         dispatch({ type: "register", payload1: email, payload2: pass });
     };
 
@@ -35,7 +35,7 @@ export const LoginProvider = ({ children }) => {
     return (
         <>
             <LoginContext.Provider
-                value={{ state, email, pass, dispatch, setEmail, setPass, setState, log, setLog, verifyState }}>
+                value={{ state, email, pass, dispatch, setEmail, setPass, setReduce, log, setLog, verifyState }}>
                 {children}
             </LoginContext.Provider>
         </>
