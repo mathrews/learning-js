@@ -1,11 +1,12 @@
 import './App.css';
-import Formulario from './components/Forulario';
+import FirstFormulario from './components/FirstForulario';
+import FormAdvanced from './components/FormAdvanced';
 
 function App() {
 
   return (
     <>
-      <Formulario />
+      <FormAdvanced />
     </>
   )
 }

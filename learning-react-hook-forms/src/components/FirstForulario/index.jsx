@@ -1,13 +1,13 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 
-const Formulario = () => {
+const FirstFormulario = () => {
     const {
         register,
         handleSubmit,
         formState: { errors },
         watch,
-        getValues
+        getValues,
     } = useForm({
         defaultValues: {
             firstName: "",
@@ -15,11 +15,10 @@ const Formulario = () => {
         },
     });
 
-    const [formData, setFormData] = useState({firstName: "", lastName: ""});
+    const [formData, setFormData] = useState({ firstName: "", lastName: "" });
 
     const firstName = watch("firstName");
     const lastName = watch("lastName");
-
 
     return (
         <>
@@ -66,13 +65,11 @@ const Formulario = () => {
                     <p>First Name: {firstName}</p>
                     <p>Last Name: {lastName}</p>
 
-                    <p>
-                        {getValues("firstName") !== formData.firstName ? "primeiro nome invalido" : ""}
-                    </p>
+                    <p>{getValues("firstName") !== formData.firstName ? "primeiro nome invalido" : ""}</p>
                 </form>
             </div>
         </>
     );
 };
 
-export default Formulario;
+export default FirstFormulario;
