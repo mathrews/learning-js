@@ -10,11 +10,10 @@ const asyncSubmit = async () => {
         }, 2000);
     });
 
-    return myPromise;
+    return myPromise; 
 }; //simulação de uma promisse em uma request de api
 
-const schema = Yup.object().shape({
-    //define os tipos de validações que serão executadas em cada campo do form
+const schema = Yup.object().shape({ //define os tipos de validações que serão executadas em cada campo do form
     password: Yup.string().required("Campo obrigatório").min(6, "Exige no mínimo 6 caracteres"),
     confirmPassword: Yup.string()
         .required("Campo obrigatório")
@@ -31,7 +30,7 @@ const FormAdvanced = () => {
         },
     });
 
-    const { errors, isSubmitting } = formState; //define o estado do formulario e possui várias propriedades utilizáveis para o formulario como o erros e o isSubmitting, como mostrado acima. O isSubmitting é como uma tela de carregamento, define o estado do formulario quando o mesmo estiver enviando os dados;
+    const { errors, isSubmitting } = formState; //define o estado do formulario e possui várias propriedades utilizáveis para o formulario como o erros e o isSubmitting, como mostrado acima.
 
     useEffect(() => {
         setFocus("password");
@@ -67,7 +66,7 @@ const FormAdvanced = () => {
                 <button
                     type="submit"
                     disabled={isSubmitting}>
-                    {isSubmitting ? "Enviando..." : "Enviar"}
+                    {isSubmitting ? "Enviando..." : "Enviar"} O isSubmitting é como uma tela de carregamento, define o estado do formulario quando o mesmo estiver enviando os dados;
                 </button>
             </form>
         </>
