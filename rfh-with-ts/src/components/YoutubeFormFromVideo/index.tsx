@@ -1,12 +1,27 @@
 import { useForm } from "react-hook-form";
 import { DevTool } from "@hookform/devtools";
 
+// const valorPadraoComFetch = async () => {
+//     const response = await fetch("https://jsonplaceholder.typicode.com/users/2");
+//     const data = await response.json();
+//     return {
+//         username: "Batman",
+//         email: data.email,
+//         channel: "",
+//     };
+// },
+
 // ao digitar nos campos do formulário usando o react hook forms, o componente não é rencerizado novamente
 
 type formValues = {
     username: string;
     email: string;
     channel: string;
+    social: {
+        twitter: string;
+        facebook: string;
+    };
+    phoneNumbers: string[];
 };
 
 const YoutubeFormFromVideo = () => {
@@ -16,14 +31,15 @@ const YoutubeFormFromVideo = () => {
         control,
         formState: { errors },
     } = useForm<formValues>({
-        defaultValues: async () => {
-            const response = await fetch("https://jsonplaceholder.typicode.com/users/2");
-            const data = await response.json();
-            return {
-                username: "Batman",
-                email: data.email,
-                channel: "",
-            };
+        defaultValues: {
+            username: "Batman",
+            email: "",
+            channel: "",
+            social: {
+                twitter: "",
+                facebook: "",
+            },
+            phoneNumbers: ["", ""],
         },
     });
 
@@ -41,6 +57,9 @@ const YoutubeFormFromVideo = () => {
     const notBlackListed = (fieldValue: string) => {
         return !fieldValue.endsWith("baddomain.com") || "This domain is not supported";
     };
+    
+    console.log(errors);
+    
 
     return (
         <>
@@ -99,6 +118,56 @@ const YoutubeFormFromVideo = () => {
                         name="channel"
                     />
                     <p className="error">{errors.channel?.message}</p>
+                </div>
+
+                <div className="form-control">
+                    <label htmlFor="twitter">Twitter</label>
+                    <input
+                        {...register("social.twitter")}
+                        type="text"
+                        id="twitter"
+                    />
+                </div>
+
+                <div className="form-control">
+                    <label htmlFor="facebook">Facebook</label>
+                    <input
+                        {...register("social.facebook")}
+                        type="text"
+                        id="facebook"
+                    />
+                </div>
+
+                <div className="form-control">
+                    <label htmlFor="primary-phone">Primary phone Number</label>
+                    <input
+                        {...register("phoneNumbers.0", {
+                            required: "This phone number is required",
+                            pattern: {
+                                value: /\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/,
+                                message: "Invalid number",
+                            },
+                        })}
+                        type="text"
+                        id="primary-phone"
+                    />
+                    <p className="error">{errors.phoneNumbers?.message}</p>
+                </div>
+
+                <div className="form-control">
+                    <label htmlFor="secondary-phone">Secondary phone Number</label>
+                    <input
+                        {...register("phoneNumbers.1", {
+                            required: "This phone number is required",
+                            pattern: {
+                                value: /\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/,
+                                message: "Invalid number",
+                            },
+                        })}
+                        type="text"
+                        id="secondary-phone"
+                    />
+                    <p className="error">{errors.phoneNumbers?.message}</p>
                 </div>
 
                 <button type="submit">Submit</button>
