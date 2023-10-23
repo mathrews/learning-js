@@ -1,4 +1,4 @@
-import { useForm } from "react-hook-form";
+import { useForm, useFieldArray } from "react-hook-form";
 import { DevTool } from "@hookform/devtools";
 
 // const valorPadraoComFetch = async () => {
@@ -22,6 +22,9 @@ type formValues = {
         facebook: string;
     };
     phoneNumbers: string[];
+    phNumbers: {
+        number: string;
+    }[];
 };
 
 const YoutubeFormFromVideo = () => {
@@ -40,7 +43,13 @@ const YoutubeFormFromVideo = () => {
                 facebook: "",
             },
             phoneNumbers: ["", ""],
+            phNumbers: [{ number: "" }],
         },
+    });
+
+    const { fields, append, remove } = useFieldArray({
+        name: "phNumbers",
+        control,
     });
 
     let renderCount = 0;
@@ -57,9 +66,8 @@ const YoutubeFormFromVideo = () => {
     const notBlackListed = (fieldValue: string) => {
         return !fieldValue.endsWith("baddomain.com") || "This domain is not supported";
     };
-    
+
     console.log(errors);
-    
 
     return (
         <>
@@ -168,6 +176,27 @@ const YoutubeFormFromVideo = () => {
                         id="secondary-phone"
                     />
                     <p className="error">{errors.phoneNumbers?.message}</p>
+                </div>
+
+                <div>
+                    <label>List of phone numbers</label>
+                    <div>
+                        {fields.map((field, index) => {
+                            return (
+                                <div className="form-control" key={field.id}>
+                                    <input type="text" {...register(`phNumbers.${index}.number` as const)} />
+                                    {index > 0 && (
+                                        <button type="button" onClick={() => remove(index)}>
+                                            Remove
+                                        </button>
+                                    )}
+                                </div>
+                            )
+                        })}
+                        <button type="button" onClick={() => append({ number: "" })}>
+                            Add phone number
+                        </button>
+                    </div>
                 </div>
 
                 <button type="submit">Submit</button>
