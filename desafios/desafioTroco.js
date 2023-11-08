@@ -32,18 +32,18 @@ const elaborarResultado = (func) => {
     let resultadoEmTexto = '';
 
     if (func === "dinheiro insuficiente") {
-        return func
+        return func;
     }
 
     func.resultados.map((item) => {
         if (item.quantidade > 0 && item.valor >= 1) {
             resultadoEmTexto += ` ${item.quantidade.toLocaleString('pt-BR')} nota(s) de R$${item.valor.toLocaleString('pt-BR')},`;
         } else if (item.quantidade > 0 && item.valor <= 1) {
-            resultadoEmTexto += ` ${item.quantidade.toLocaleString('pt-BR')} moeda(s) de R$${item.valor.toLocaleString('pt-BR')},`
+            resultadoEmTexto += ` ${item.quantidade.toLocaleString('pt-BR')} moeda(s) de R$${item.valor.toLocaleString('pt-BR')},`;
         }
     })
 
     return `Troco para R$${func.troco}:${resultadoEmTexto}`.replace(/.$/, ".");
 }
 
-console.log(elaborarResultado(calcTroco(10, 40)));
+console.log(elaborarResultado(calcTroco(999.89, 1310)));
